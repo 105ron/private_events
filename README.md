@@ -1,4 +1,4 @@
-# Priavte Events-Brite Clone
+# Private Events-Brite Clone
 
 Ruby on Rails back end demonstration to simulate [Eventbrite](http://www.eventbrite.com/)
 

@@ -1,0 +1,8 @@
+<h1>New User? Sign up now!</h1>
+<%= form_for @user do |f| %>
+	<%= f.label :name, 'Enter a username:' %>
+  <%= f.text_field :name, placeholder: "Your name here" %><br>
+  <%= f.label :name, 'Enter an email  :' %>
+  <%= f.text_field :email, placeholder: "example@example.com" %><br>
+  <%= f.submit "Submit" %>
+<% end %>
