@@ -16,7 +16,9 @@ class UsersController < ApplicationController
   end
 
   def show
-  
+    @user = current_user
+    @events = @user.events
+    #debugger
   end
 
   private
