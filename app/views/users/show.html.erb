@@ -1,2 +1,6 @@
-<p>This is the show page</p>
-<%= render @events %>
+<h1>You're attending the following events</h1>
+<li><% @attendees.each do |f| %>
+	<ul>
+		<%= f.event.name %>
+	</ul>
+<% end %></li>	
