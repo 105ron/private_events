@@ -1,0 +1,11 @@
+<h1><%= "New event for #{current_user.name}" %></h1> 
+  <%= form_for(@event, url: events_path) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	<%= f.label :name, 'Enter your events name:' %>
+  <%= f.text_field :name, placeholder: "Your event here" %><br>
+  <%= f.label :name, 'Enter a brief description  :' %>
+  <%= f.text_field :description, placeholder: "Information about your event" %><br>
+  <%= f.label :date, 'Enter event date  :' %>
+  <%= f.date_field :date %><br>
+  <%= f.submit "Submit" %>
+<% end %>

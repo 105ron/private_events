@@ -1,9 +1,9 @@
 <h1>New User? Sign up now!</h1>
   <%= form_for(@user, url: users_path) do |f| %>
-	<%= render 'shared/error_messages' %>
+	<%= render 'shared/error_messages', object: f.object %>
 	<%= f.label :name, 'Enter a username:' %>
   <%= f.text_field :name, placeholder: "Your name here" %><br>
-  <%= f.label :name, 'Enter an email  :' %>
+  <%= f.label :email, 'Enter an email  :' %>
   <%= f.text_field :email, placeholder: "example@example.com" %><br>
   <%= f.submit "Submit" %>
 <% end %>

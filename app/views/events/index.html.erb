@@ -1,0 +1,11 @@
+<h1>Events index</h1>
+<li>
+  <% @events.each do |event| %>
+    <ol><strong>
+      <%= event.name %>
+      </strong><ol>
+      	<%= event.description %>
+      </ol>
+    </ol>
+  <% end %>
+</li>

@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @events = @user.events
+    @events = @user.events.all
     #debugger
   end
 

@@ -2,12 +2,30 @@
 
 rhys:
   name: Rhys Example
-  email: rhys@rails.com
+  email: rhys@example.com
 
-one:
-  name: one
-  email: one@example.com
 
-two:
-  name: two
-  email: two@example.com
+archer:
+  name: Sterling Archer
+  email: duchess@example.gov
+
+
+
+lana:
+  name: Lana Kane
+  email: hands@example.gov
+
+
+
+malory:
+  name: Malory Archer
+  email: boss@example.gov
+
+
+
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+<% end %>

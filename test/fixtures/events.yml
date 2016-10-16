@@ -4,8 +4,7 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+christmas: 
+  name: christmas
+  description: It's a christian holiday
+  date: 2016-12-24 23:59:59

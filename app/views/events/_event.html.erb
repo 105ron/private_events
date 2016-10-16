@@ -1,10 +1,10 @@
-<%= link_to event.user.name, event.user %>
 <li>
-  <ul>
+  <ul><strong>
     <%= event.name %>
-    <ul><br>
+    </strong><ul><br>
     <%= event.description %>
     </ul>
   </ul>
-  Posted <%= time_ago_in_words(event.created_at) %> ago.
-</li>  
+  Posted <%= time_ago_in_words(event.created_at) %> ago by <%= link_to event.user.name, event.user %>
+</li> 
+<br>
