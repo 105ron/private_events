@@ -1,10 +1,26 @@
 <h1>Events index</h1>
+<p>Welcome, you have the following upcoming events</p>
 <li>
-  <% @events.each do |event| %>
+  <% @upcoming_events.each do |event| %>
     <ol><strong>
       <%= event.name %>
       </strong><ol>
-      	<%= event.description %>
+      	<%= event.description %><br> 
+      	<%= event.date %>
+      </ol>
+    </ol>
+  <% end %>
+</li>
+
+  <br>
+  <p>Unfortunately you have missed out on these events</p>
+<li>
+  <% @previous_events.each do |event| %>
+    <ol><strong>
+      <%= event.name %>
+      </strong><ol>
+      	<%= event.description %><br>
+      	<%= event.date %>
       </ol>
     </ol>
   <% end %>
