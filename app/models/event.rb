@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
-	scope :upcoming, lambda { where(["date > ?", Time.now]) }
-	scope :past, lambda { where(["date < ?", Time.now]) }
+	scope :upcoming, lambda { where(["date > ?", Time.now]).
+														order(date: :asc) }
+	scope :past, lambda { where(["date < ?", Time.now]).
+												order(date: :desc)}
 
 	belongs_to :user
 	has_many :attendees
