@@ -1,0 +1,3 @@
+SELECT name, description, date
+  FROM events JOIN attendees ON (events.id=attendees.event_id)
+  WHERE attendees.user_id = 1 AND events.date > '2016-10-17';

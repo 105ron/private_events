@@ -8,4 +8,20 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
+
+
+  def upcoming_events
+  	Event.joins(:attendees).
+  	where("events.date > ?", Time.now).
+  	where("attendees.user_id = :user_id", user_id: id).
+  	order(date: :asc)
+  end
+
+  def past_events
+  	Event.joins(:attendees).
+  	where("events.date < ?", Time.now).
+  	where("attendees.user_id = :user_id", user_id: id).
+  	order(date: :desc)
+  end
+
 end

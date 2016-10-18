@@ -1,6 +1,15 @@
 <h1>You're attending the following events</h1>
-<li><% @attendees.each do |f| %>
+<li><% @users_events.each do |f| %>
 	<ul>
-		<%= f.event.name %>
+		<%= f.name %>
+		<ul><%= f.date %></ul>
+	</ul>
+<% end %></li>	
+
+<h1>These events have passed. Did you enjoy attending them?</h1>
+<li><% @past_users_events.each do |f| %>
+	<ul>
+		<%= f.name %>
+		<ul><%= f.date %></ul>
 	</ul>
 <% end %></li>	
