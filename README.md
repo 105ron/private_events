@@ -1,7 +1,8 @@
-# Private Events-Brite Clone
+# Private Events
 
-Ruby on Rails back end demonstration to simulate [Eventbrite](http://www.eventbrite.com/)
+Ruby on Rails back end demonstration to simulate some of the functionality of [Eventbrite](http://www.eventbrite.com/)
 
-* This App was created using the steps outlined on [TheOdinProject](http://www.theodinproject.com) on the Ruby on Rails section of the [cirriculum](http://www.theodinproject.com/ruby-on-rails/associations?ref=lnav)
+A user can create events. A user can attend many events. An event can be attended by many users. This requires a many-to-many relationship.
 
-* There is only a minimalist front end to this app.
+This is part of [TheOdinProject](http://www.theodinproject.com) Rail's track. See [here](http://www.theodinproject.com/courses/ruby-on-rails/lessons/associations?ref=lc-pb) for more information.
+
